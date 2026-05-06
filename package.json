@@ -1,0 +1,8 @@
+{
+  "name": "vitest-types-issue",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/frontend"
+  ]
+}

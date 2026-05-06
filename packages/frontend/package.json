@@ -1,0 +1,12 @@
+{
+  "name": "vitest-types-issue-frontend",
+  "type": "module",
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "devDependencies": {
+    "@vitest/browser-playwright": "4.1.5",
+    "typescript": "6.0.3",
+    "vitest": "4.1.5"
+  }
+}
