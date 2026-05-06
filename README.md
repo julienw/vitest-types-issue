@@ -7,7 +7,7 @@ In an npm workspaces monorepo, when `vitest` is hoisted to the root `node_module
 ## Steps to reproduce
 
 ```sh
-git clone <this-repo>
+git clone https://github.com/julienw/vitest-types-issue
 npm ci
 cd packages/frontend
 npx tsc
