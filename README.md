@@ -54,9 +54,9 @@ packages/
         browser-playwright/        ← only here, not at root
 ```
 
-## Why it appeared intermittently
+## Notes on reproducibility
 
-Between vitest 4.1.3 and 4.1.4, a version mismatch between root and workspace caused npm to install a **full local copy of vitest** inside `packages/frontend/node_modules/`. That co-located `vitest` and `@vitest/browser-playwright`, making TypeScript able to resolve the chain. When everything was updated to 4.1.5 simultaneously, npm hoisted vitest back to root, splitting them again.
+The bug only triggers when npm produces the split layout shown above. If npm happens to co-locate `vitest` and `@vitest/browser-playwright` in the same `node_modules/` directory (for example because a version mismatch forces a local copy of vitest into the workspace), TypeScript can resolve the chain and the error disappears. This makes the bug sensitive to npm hoisting decisions, which can change across installs as dependency versions are bumped.
 
 ## Environment
 
